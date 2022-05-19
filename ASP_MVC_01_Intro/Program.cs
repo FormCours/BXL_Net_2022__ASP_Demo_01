@@ -12,6 +12,8 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseStaticFiles();
 
+app.UseStatusCodePages();
+
 app.UseRouting();
 
 app.UseAuthorization();
