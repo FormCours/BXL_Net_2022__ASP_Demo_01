@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page de demo</title>
+    </head>
+    <body>
+        <h1>Hello World :o</h1>
+        <h2>Il est @DateTime.Now.ToLongTimeString()</h2>
+        @{
+            string name = "Zaza";
+
+            for (int i = 0; i < 3; i++)
+            {
+                        <p>Element @(i + 1)</p>
+            }
+
+            @:Ceci est du texte dans la page HTML :o
+        }
+        
+        <!-- Ceci est un commentaire HTML: Visible chez le client -->
+        @* Ceci est un commentaire razor: N'aparait pas dans le code final *@
+
+
+        <h2>@name</h2>
+        <p>Adresse email : zaza.vanderquack@demo.bxl</p>
+        <p>Faire un symbole arobase</p>
+        <ul>
+            <li>Razor : @@</li>
+            <li>Html  : &#64;</li>
+        </ul>
+
+        <h2>Donnée du ViewData</h2>
+        <h3>Demo 01</h3>
+        <ul>
+            <li>@ViewData["firstname"]</li>
+            <li>@ViewBag.lastname</li>
+        </ul>
+        <h3>Demo 02</h3>
+        <p>Valeur du ViewData "props" : @ViewData["ExempleProps"]</p>
+    </body>
+</html>

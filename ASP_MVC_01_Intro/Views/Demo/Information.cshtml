@@ -1,0 +1,11 @@
+﻿@model ASP_MVC_01_Intro.Models.Person
+@* ↑ La vue attend des données dans le format "Person" *@
+
+@{
+    ViewData["Title"] = "Information";
+}
+
+<h1>Information de la personne</h1>
+<h3>@Model.Firstname @Model.Lastname</h3>
+<p>Email : @Model.Email</p>
+<p>Date de naissance : @Model.Birthdate.ToLongDateString()</p>
